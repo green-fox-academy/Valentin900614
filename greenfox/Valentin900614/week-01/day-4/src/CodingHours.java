@@ -9,6 +9,6 @@ public class CodingHours {
         // Print the percentage of the coding hours in the semester if the average
         // work hours weekly is 52
         System.out.println("An average Green Fox attendee codes " + 17*5*6 + " hours in a semester.");
-        System.out.println("The percentage of the coding hours in the semester is " + 30/52. +"%.");
+        System.out.println("The percentage of the coding hours in the semester is " + (52*17)/24*17*7/100 +"%.");
     }
 }
