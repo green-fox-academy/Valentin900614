@@ -24,6 +24,6 @@ public class AverageOfInput {
 
         int sum = a+b+c+d+e;
 
-        System.out.println("The sum of your numbers is: " + sum + ". Their average is: " + (a+b+c+d+e)/5 + ".");
+        System.out.println("The sum of your numbers is: " + sum + ". Their average is: " + sum/5 + ".");
     }
 }
