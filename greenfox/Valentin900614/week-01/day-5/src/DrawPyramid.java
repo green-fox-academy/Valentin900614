@@ -17,8 +17,6 @@ public class DrawPyramid {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Gimme a number!");
         int a = scanner.nextInt();
-        int b = 1;
-        int c = a/2;
 
         for(int i=1; i<=a; i++) {
             for(int j=0; j<a-i; j++) {
