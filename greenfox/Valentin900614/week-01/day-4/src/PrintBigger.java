@@ -12,10 +12,10 @@ public class PrintBigger {
 
         if(a>b) {
             System.out.println(a + " is bigger.");
-        }
-        if (a<b) {
+        } else if (a<b) {
             System.out.println(b + " is bigger.");
-        }
+        } /* else
+            System.out.println(a + " and " + b + " are even!"); */
 
     }
 }
