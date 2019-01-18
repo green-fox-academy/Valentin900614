@@ -24,13 +24,13 @@ public class PartyIndicator {
         System.out.println("Gimme the number of the boys!");
         int b = scanner.nextInt();
 
-        if(a==b && a+b>=20) {
+        if(a == b && a + b >= 20) {
             System.out.println("The party is excellent!");
-        } else if (a==0 && a+b>0) {
+        } else if (a == 0 && a + b > 0) {
             System.out.println("Sausage party");
-        }else if (a!=b && a+b>=20) {
+        }else if (a != b && a + b >= 20 && a != 0) {
             System.out.println("Quite cool party!");
-        } else if (a+b<20){
+        } else if (a + b < 20){
             System.out.println("Average party...");
         }
 
