@@ -13,7 +13,7 @@ public class GuessTheNumber {
         Scanner scanner = new Scanner(System.in);
         int storedNumber = 13;
         int a = 0;
- 
+
         while (a!=storedNumber) {
             System.out.println("Guess the number between 1 and 20!");
             a = scanner.nextInt();
