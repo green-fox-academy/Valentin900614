@@ -21,15 +21,14 @@ public class Matchmaking{
 
                 }
             }
-        // ha változtatunk a két arraylist között hogy még nagyobb legyen közöttük a különbség, az alább lévő kód nem lesz jó
         }
         if (firstList.size() - secondList.size() > 0) {
             for (int k = 0; k < firstList.size() - secondList.size(); k++) {
-                joinedList.add(firstList.get(firstList.size()-1).toString());
+                joinedList.add(firstList.get((firstList.size()+k)-(firstList.size()-secondList.size())).toString());
             }
         }   else if (firstList.size() - secondList.size() < 0){
             for (int k = 0; k < secondList.size() - firstList.size(); k++) {
-                joinedList.add(secondList.get(secondList.size()-1).toString());
+                joinedList.add(secondList.get((secondList.size()+k)-(secondList.size()-firstList.size())).toString());
             }
 
         }
