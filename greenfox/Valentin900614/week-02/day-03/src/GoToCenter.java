@@ -11,17 +11,15 @@ public class GoToCenter {
         // and draws a line from that point to the center of the canvas.
         // Draw 3 lines with that function. Use loop for that.
 
-        int proba = 0;
-        do {
-            graphics.setColor(Color.GREEN);
-            graphics.drawLine(x, y, WIDTH/2, HEIGHT/2);
+        for (int i = 0; i < 3; i++) {
+            draw(20,20+i*55, graphics);
+        }
 
-            x += 20;
-            y += 100;
-            proba++;
-        } while (proba!=3);
+    }
 
-
+    public static void draw (int x, int y, Graphics g){
+        g.setColor(Color.GREEN);
+        g.drawLine(x, y, WIDTH/2, HEIGHT/2);
     }
 
     // Don't touch the code below
