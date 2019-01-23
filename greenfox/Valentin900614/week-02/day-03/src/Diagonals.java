@@ -17,7 +17,7 @@ public class Diagonals {
                 }
             }
         }
-        
+
         for (int i = 0; i < WIDTH; i++) {
             for (int j = HEIGHT; j > 0; j--) {
                 if (j+i==HEIGHT) {

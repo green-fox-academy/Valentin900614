@@ -12,7 +12,7 @@ public class PositionSquare {
         // and draws a 50x50 square from that point.
         // draw 3 squares with that function.
         // avoid code duplication.
-        
+
         for (int i = 0; i < 3; i++) {
             draw(20,20+i*55, graphics);
         }
