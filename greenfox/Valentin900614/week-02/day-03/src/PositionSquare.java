@@ -6,23 +6,22 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class PositionSquare {
 
-    public static void mainDraw(int x, int y, Graphics graphics){
+    public static void mainDraw(Graphics graphics){
         // create a square drawing function that takes 3 parameters:
         // the x and y coordinates of the square's top left corner and the graphics
         // and draws a 50x50 square from that point.
         // draw 3 squares with that function.
         // avoid code duplication.
+        
+        for (int i = 0; i < 3; i++) {
+            draw(20,20+i*55, graphics);
+        }
 
-        int num = 0;
-        do {
-            graphics.setColor(Color.BLUE);
-            graphics.drawRect(x, y, 50, 50);
+    }
 
-            x += 30;
-            y += 60;
-            num++;
-        } while (num != 3);
-
+    public static void draw (int x, int y, Graphics g){
+        g.setColor(Color.BLUE);
+        g.drawRect(x, y, 50, 50);
     }
 
     // Don't touch the code below
@@ -44,7 +43,7 @@ public class PositionSquare {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-            mainDraw(20, 20, graphics);
+            mainDraw(graphics);
         }
     }
 
