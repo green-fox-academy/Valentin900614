@@ -11,15 +11,15 @@ public class HorizontalLines {
         // and draws a 50 long horizontal line from that point.
         // Draw 3 lines with that function. Use loop for that.
 
-        int proba = 0;
-        do {
-            graphics.setColor(Color.BLUE);
-            graphics.drawLine(x, y, x+50, y);
+        for (int i = 0; i < 3; i++) {
+            draw(20,20+i*20, graphics);
+        }
 
-            y += 20;
-            proba++;
-        } while (proba!=3);
+    }
 
+    public static void draw (int x, int y, Graphics g){
+        g.setColor(Color.BLUE);
+        g.drawLine(x, y, x+50, y);
     }
 
     // Don't touch the code below
