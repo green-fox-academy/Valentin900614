@@ -1,4 +1,4 @@
-package blogPost;
+package blogpost;
 
 public class BlogPost {
 
