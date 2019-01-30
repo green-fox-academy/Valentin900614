@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         //nem tettem konstruktort
-        
+
         PostIt first = new PostIt();
         first.backgroundColor = Color.ORANGE;
         first.text = "Idea 1";
