@@ -12,8 +12,11 @@ public class String1 {
             return string;
         }
         else {
-            char first = from == string.charAt(0) ? to : string.charAt(0);
-            return first + csere(string.substring(1), from, to);
+            if (string.charAt(0) == from) {
+                return to + csere(string.substring(1), from, to);
+            } else {
+                return string.charAt(0) + csere(string.substring(1), from, to);
+            }
         }
     }
 
