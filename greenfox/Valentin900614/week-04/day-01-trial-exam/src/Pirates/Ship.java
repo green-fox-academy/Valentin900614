@@ -19,5 +19,18 @@ public class Ship {
         return List<Pirate>;
     }*/
 
+    public int getGolds() {
+        int sum = 0;
+
+        for (int i = 0; i < pirates.size(); i++) {
+       //     sum += this.gold;
+        }
+
+        return sum;
+    }
+
+    public void lastDayOnTheShip() {
+  //      pirates.party();
+    }
 
 }
