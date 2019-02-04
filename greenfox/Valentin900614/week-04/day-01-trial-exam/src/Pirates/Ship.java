@@ -15,4 +15,9 @@ public class Ship {
         pirates.add(pirate);
     }
 
+  /*  public List<Pirate> getPoorPirates() {
+        return List<Pirate>;
+    }*/
+
+
 }

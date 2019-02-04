@@ -6,6 +6,8 @@ public class Main {
         Pirate pirate1 = new Pirate("Valami", 20, 20, true, true);
         Pirate pirate2 = new Pirate("Valaki", 5, 10, false, false);
 
+
+
         System.out.println(pirate1.gold);
         System.out.println(pirate1.healthPoints);
         System.out.println(pirate2.gold);
