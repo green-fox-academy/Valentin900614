@@ -1,8 +1,6 @@
 package greenfox;
 
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Cohort {
 
@@ -17,10 +15,10 @@ public class Cohort {
     }
 
     public void addStudent (Student student) {
-        students.add(student); // ?????????
+        students.add(student);
     }
     public void addMentor (Mentor mentor) {
-        mentors.add(mentor); // ?????????????
+        mentors.add(mentor);
     }
 
     public void info () {
