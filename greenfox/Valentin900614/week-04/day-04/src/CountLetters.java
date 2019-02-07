@@ -10,6 +10,8 @@ public class CountLetters {
 
         // Converting given string to char array
 
+        inputString = inputString.replaceAll("\\s", "");
+
         char[] strArray = inputString.toCharArray();
 
         // checking each char of strArray
