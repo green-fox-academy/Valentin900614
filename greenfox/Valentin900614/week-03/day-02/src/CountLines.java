@@ -24,7 +24,7 @@ public class CountLines {
                 lines++;
             }
         } catch (Exception ex) {
-            return 0;       //lehet nem ez volt a feladat feltétele
+            return lines;
         }
         return lines;
     }

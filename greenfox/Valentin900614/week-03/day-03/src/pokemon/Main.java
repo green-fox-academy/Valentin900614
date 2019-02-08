@@ -21,7 +21,7 @@ public class Main {
         for (int i = 0; i < pokemonOfAsh.size(); i++) {
                 if (pokemonOfAsh.get(i).isEffectiveAgainst(wildPokemon))
                     name = pokemonOfAsh.get(i).name;
-             }
+        }
 
         System.out.print("I choose you, " + name + ".");
     }
