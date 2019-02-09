@@ -11,7 +11,7 @@ public class Counter {
 
     public Counter(int number){
         this.number = number;
-        start = this.number;
+        start = number;
     }
 
     public void add() {
@@ -19,15 +19,15 @@ public class Counter {
     }
 
     public void add(int num) {
-        this.number += num;
+        number += num;
     }
 
     public void get() {
-        System.out.println(this.number);
+        System.out.println(number);
     }
 
     public void reset() {
-        this.number = start;
+        number = start;
     }
 
 }

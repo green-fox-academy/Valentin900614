@@ -2,8 +2,8 @@ package counter;
 
 public class Main {
     public static void main(String[] args) {
-/*
-        Counter num = new Counter(0);
+
+        Counter num = new Counter(20);
         num.get();
         num.add();
         num.get();
@@ -11,6 +11,6 @@ public class Main {
         num.get();
         num.reset();
         num.get();
-*/
+
     }
 }

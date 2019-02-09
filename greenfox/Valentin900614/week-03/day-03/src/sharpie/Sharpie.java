@@ -13,7 +13,7 @@ public class Sharpie {
     }
 
     public void use(){
-        inkAmount--;
+        this.inkAmount--;
     }
 
 }
