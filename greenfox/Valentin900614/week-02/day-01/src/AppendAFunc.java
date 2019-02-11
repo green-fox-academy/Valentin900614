@@ -14,7 +14,6 @@ public class AppendAFunc {
 
     }
     public static String appendAFunc (String smthng) {
-        smthng = smthng + "a";
-        return smthng;
+        return smthng + "a";
     }
 }

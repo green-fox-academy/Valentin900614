@@ -7,10 +7,10 @@ public class Reverse {
 
         int[] aj = {3, 4, 5, 6, 7};
 
-        for (int k = 0; k < (aj.length-1)/2; k++) {
+        for (int k = 0; k < (aj.length - 1) / 2; k++) {
             int temp = aj[k];
-            aj[k] = aj[aj.length-1-k];
-            aj[aj.length-1-k] = temp;
+            aj[k] = aj[aj.length - 1 - k];
+            aj[aj.length - 1 - k] = temp;
         }
 
         for (int row : aj) {

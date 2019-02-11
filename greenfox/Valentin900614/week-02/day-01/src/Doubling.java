@@ -1,17 +1,15 @@
 public class Doubling {
-       public static void main(String[] args) {
+    public static void main(String[] args) {
         // - Create an integer variable named `baseNum` and assign the value `123` to it
         // - Create a function called `doubling` that doubles it's input parameter and returns with an integer
         // - Print the result of `doubling(baseNum)`
 
         int baseNum = 123;
-        System.out.println(doub(baseNum));
+        System.out.println(doubleTheNumber(baseNum));
 
+    }
 
-
-        }
-        public static int doub (int number){
-        int doubled = 2*number;
-        return doubled;
+    public static int doubleTheNumber(int number) {
+        return number*2;
     }
 }

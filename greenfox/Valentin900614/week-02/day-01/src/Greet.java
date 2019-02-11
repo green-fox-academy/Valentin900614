@@ -9,10 +9,10 @@ public class Greet {
         // - Greet `al`
 
         String al = "Greenfox";
-        greet(al);
+        greeting(al);
 
     }
-    public static void greet(String name){
+    public static void greeting(String name){
         System.out.println("Greetings dear " + name);
     }
 }

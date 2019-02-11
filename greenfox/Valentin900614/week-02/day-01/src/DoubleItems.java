@@ -9,7 +9,9 @@ public class DoubleItems {
             numList[i] = 2*numList[i];
         }
 
-        //System.out.println(numList[0]);
+        for (int num : numList ) {
+            System.out.print(num + " ");
+        }
 
     }
 }

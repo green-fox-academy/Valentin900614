@@ -10,7 +10,9 @@ public class SwapElements {
         abc[0] = abc[2];
         abc[2] = temp;
 
-        System.out.println(abc[0]);
+        for (String content : abc) {
+            System.out.println(content);
+        }
 
     }
 }

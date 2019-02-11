@@ -9,7 +9,9 @@ public class AppendA {
             animals[i] = animals[i] + "a";
         }
 
-        //System.out.println(animals[0]);
+        for (String animal : animals) {
+            System.out.println(animal);
+        }
 
     }
 }
