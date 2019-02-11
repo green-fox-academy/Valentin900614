@@ -12,7 +12,7 @@ public class Reverse {
         char help;
         String uj = "";
         for (int i = 0; i < smthng.length(); i++) {
-            help = smthng.charAt(smthng.length()-1-i);
+            help = smthng.charAt(smthng.length() - 1 - i);
             uj += help;
         }
         return uj;

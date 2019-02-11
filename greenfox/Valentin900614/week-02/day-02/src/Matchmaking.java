@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Matchmaking{
     public static void main(String[] args){
-        ArrayList<String> girls = new ArrayList<String>(Arrays.asList("Eve","Ashley","Claire","Kat","Jane"));
-        ArrayList<String> boys = new ArrayList<String>(Arrays.asList("Joe","Fred","Tom","Todd","Neef","Jeff"));
+        ArrayList<String> girls = new ArrayList<>(Arrays.asList("Eve","Ashley","Claire","Kat","Jane"));
+        ArrayList<String> boys = new ArrayList<>(Arrays.asList("Joe","Fred","Tom","Todd","Neef","Jeff"));
 
         // Write a method that joins the two lists by matching one girl with one boy into a new list
         // If someone has no pair, he/she should be the element of the list too
@@ -24,11 +24,11 @@ public class Matchmaking{
         }
         if (firstList.size() - secondList.size() > 0) {
             for (int k = 0; k < firstList.size() - secondList.size(); k++) {
-                joinedList.add(firstList.get((firstList.size()+k)-(firstList.size()-secondList.size())).toString());
+                joinedList.add(firstList.get((firstList.size() + k) - (firstList.size() - secondList.size())).toString());
             }
         }   else if (firstList.size() - secondList.size() < 0){
             for (int k = 0; k < secondList.size() - firstList.size(); k++) {
-                joinedList.add(secondList.get((secondList.size()+k)-(secondList.size()-firstList.size())).toString());
+                joinedList.add(secondList.get((secondList.size() + k) - (secondList.size() - firstList.size())).toString());
             }
 
         }

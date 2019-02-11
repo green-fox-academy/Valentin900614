@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class IsInList{
-    public static void main(String... args){
+    public static void main(String[] args){
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10, 12, 14, 16));
         checkNums(list);
         System.out.println(checkNums(list));
