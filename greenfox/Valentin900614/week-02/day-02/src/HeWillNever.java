@@ -5,7 +5,7 @@ public class HeWillNever {
         String out = "";
         int[] notSoCrypticMessage = {1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11};
 
-        Map<Integer, String> map = new HashMap<Integer, String>();
+        Map<Integer, String> map = new HashMap<>();
 
         map.put(7, "run around and desert you");
         map.put(50, "tell a lie and hurt you ");
@@ -23,7 +23,7 @@ public class HeWillNever {
         
         for (int i = 0; i < notSoCrypticMessage.length; i++) {
             for (Integer key: map.keySet()
-             ) {if (notSoCrypticMessage[i]==key)
+             ) {if (notSoCrypticMessage[i] == key)
                     out += map.get(key);
             }
         }
