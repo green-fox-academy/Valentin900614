@@ -14,9 +14,7 @@ public class Sponsor extends Person {
     }
 
     public Sponsor (String name, int age, String gender, String company) {
-        super.name = name;
-        super.age = age;
-        super.gender = gender;
+        super(name, age, gender);
         this.company = company;
         this.hiredStudents = 0;
     }

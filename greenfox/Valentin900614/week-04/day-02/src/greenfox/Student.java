@@ -6,9 +6,7 @@ public class Student extends Person {
     int skippedDays;
 
     public Student (String name, int age, String gender, String previousOrganization) {
-        super.name = name;
-        super.age = age;
-        super.gender = gender;
+        super(name, age, gender);
         this.previousOrganization = previousOrganization;
         this.skippedDays = 0;
     }
