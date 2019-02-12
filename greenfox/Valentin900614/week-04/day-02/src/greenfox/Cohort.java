@@ -1,12 +1,13 @@
 package greenfox;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cohort {
 
     String name;
-    ArrayList<Student> students = new ArrayList<>();
-    ArrayList<Mentor> mentors = new ArrayList<>();
+    List<Student> students = new ArrayList<>();
+    List<Mentor> mentors = new ArrayList<>();
 
     public Cohort (String name) {
         this.name = name;
@@ -22,7 +23,7 @@ public class Cohort {
     }
 
     public void info () {
-        System.out.println("The name " + this.name + " has " + this.students.size() + " students and " + this.mentors.size() + " mentors.");
+        System.out.println("The " + this.name + " cohort has " + this.students.size() + " students and " + this.mentors.size() + " mentors.");
     }
 
 }

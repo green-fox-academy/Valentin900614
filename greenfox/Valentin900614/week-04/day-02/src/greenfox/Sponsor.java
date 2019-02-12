@@ -28,7 +28,7 @@ public class Sponsor extends Person {
     }
 
     public void hire () {
-        hiredStudents++;
+        this.hiredStudents++;
     }
 
 }

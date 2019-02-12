@@ -1,11 +1,12 @@
 package greenfox;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Person> people = new ArrayList<>();
+        List<Person> people = new ArrayList<>();
 
         Person mark = new Person("Mark", 46, "male");
         people.add(mark);
