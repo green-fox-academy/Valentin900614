@@ -6,24 +6,7 @@ public class Anagram {
     }
 
     public boolean anagram (String x, String y) {
-     /*   String x1 = x.replaceAll(" ", "");
-        String y1 = y.replaceAll(" ", "");
-        char a;
-        char b;
-        int sameChars = 0;
-        for (int i = 0; i < x1.length(); i++) {
-            a = x1.charAt(i);
-            for (int j = 0; j < y1.length(); j++) {
-                b = y1.charAt(j);
-                if (a == b)
-                    sameChars++;
-            }
-        }
-        if (sameChars == x1.length()) {
-            return true;
-        }
-        return false;
-   */
+
         x  = x.replaceAll("\\s", "").toLowerCase();
         y = y.replaceAll("\\s", "").toLowerCase();
 

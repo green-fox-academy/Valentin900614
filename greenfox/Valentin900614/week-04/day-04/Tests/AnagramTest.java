@@ -1,7 +1,3 @@
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 
@@ -11,8 +7,8 @@ public class AnagramTest {
 
     @Test
     public void isTwoStringsAnagrams () {
-        String a = "indul a gorog aludni";
-        String b = "indul a gorog aludni";
+        String a = "asd";
+        String b = "dsa";
 
         Anagram isAnagram = new Anagram();
 
