@@ -19,7 +19,7 @@ public class MostCommonChar {
     private static void mostCommonElement(List<String> list) {
 
         Map<String, Integer> map = new HashMap<>();
-        String subString = "";
+        String subString;
 
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.get(i).length(); j++) {
@@ -38,8 +38,8 @@ public class MostCommonChar {
         }
 
         Map.Entry<String, Integer> firstEntry = map.entrySet().iterator().next();
-        Integer largestKeyValue = firstEntry.getValue();
         String largestKey = firstEntry.getKey();
+        Integer largestKeyValue = firstEntry.getValue();
 
         for (Map.Entry<String, Integer> asd : map.entrySet()) {
             Integer key = asd.getValue();
@@ -48,9 +48,7 @@ public class MostCommonChar {
                 largestKey = asd.getKey();
             }
         }
-        System.out.println("Largest Key       : " + largestKey);
-        System.out.println("Largest Key Value : " + largestKeyValue);
-
+        System.out.println();
+        System.out.println("Most common char in the text: " + largestKey);
     }
-
 }
