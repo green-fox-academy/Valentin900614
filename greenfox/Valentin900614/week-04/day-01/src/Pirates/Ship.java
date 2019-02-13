@@ -25,7 +25,7 @@ public class Ship {
     }
 
     public List<Pirates> getPoorPirates (List<Pirates> list) {
-        List<Pirates> poorPirates = new ArrayList<Pirates>();
+        List<Pirates> poorPirates = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).woodenLeg && list.get(i).gold < 15) {
                 poorPirates.add(list.get(i));
@@ -42,7 +42,7 @@ public class Ship {
         return sumGold;
     }
 
-    public void lastDayOnTheShip (List<Pirates> list) {
+    private void lastDayOnTheShip (List<Pirates> list) {
         for (int i = 0; i < list.size(); i++) {
             list.get(i).party();
         }
