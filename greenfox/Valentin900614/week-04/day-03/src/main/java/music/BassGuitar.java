@@ -3,11 +3,11 @@ package main.java.music;
 public class BassGuitar extends StringedInstruments{
 
     public BassGuitar() {
-        super.numberOfStrings = 4;
+        super(4);
     }
 
     public BassGuitar(int strings) {
-       super.numberOfStrings = strings;
+       super(strings);
     }
 
     @Override

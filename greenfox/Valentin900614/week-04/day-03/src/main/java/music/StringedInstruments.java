@@ -10,4 +10,8 @@ public abstract class StringedInstruments extends Instrument{
         sound();
     }
 
+    public StringedInstruments (int numberOfStrings) {
+        this.numberOfStrings = numberOfStrings;
+    }
+
 }
