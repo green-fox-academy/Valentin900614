@@ -11,7 +11,7 @@ public class Sum {
         System.out.println(sum(in));
     }
 
-    public static int sum (int num) {
+    private static int sum (int num) {
         int all = 0;
         for (int i = 1; i < num ; i++) {
             all = all + i;

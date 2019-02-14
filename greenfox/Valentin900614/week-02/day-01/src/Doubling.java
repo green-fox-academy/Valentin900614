@@ -9,7 +9,7 @@ public class Doubling {
 
     }
 
-    public static int doubleTheNumber(int number) {
-        return number*2;
+    private static int doubleTheNumber(int number) {
+        return number * 2;
     }
 }

@@ -13,7 +13,7 @@ public class AppendAFunc {
         System.out.println(appendAFunc(typo));
 
     }
-    public static String appendAFunc (String smthng) {
+    private static String appendAFunc (String smthng) {
         return smthng + "a";
     }
 }

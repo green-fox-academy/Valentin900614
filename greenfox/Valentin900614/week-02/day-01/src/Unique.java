@@ -11,12 +11,12 @@ public class Unique {
         System.out.println(unique(new int[] {1, 11, 34, 11, 52, 61, 1, 34}));
         //  should print: `[1, 11, 34, 52, 61]`
     }
-    public static List<Integer> unique(int[] list){
+    private static List<Integer> unique(int[] list){
         Arrays.sort(list);
         List<Integer> list1 = new ArrayList<>();
-        for (int i = 0; i < list.length; i++) {
-            if (!list1.contains(list[i])) {
-                list1.add(list[i]);
+        for (int i : list) {
+            if (!list1.contains(i)) {
+                list1.add(i);
             }
         }
         return list1;

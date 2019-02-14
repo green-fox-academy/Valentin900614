@@ -3,7 +3,7 @@ public class PalindromeBuilder {
         System.out.println(palindroming("Nemár!"));
     }
 
-    public static String palindroming (String string) {
+    private static String palindroming(String string) {
         String backward = "";
         for (int i = string.length() - 1; i >= 0; i--) {
             backward += string.charAt(i);

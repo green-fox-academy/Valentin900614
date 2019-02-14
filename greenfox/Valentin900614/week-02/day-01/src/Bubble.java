@@ -12,7 +12,7 @@ public class Bubble {
                 //  should print [34, 24, 12, 9, 5]
     }
 
-    public static int[] bubble(int[] array){
+    private static int[] bubble(int[] array){
         int temp;
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -29,9 +29,9 @@ public class Bubble {
         return array;
     }
 
-    public static int[] advancedBubble(int[] array, boolean ask) {
+    private static int[] advancedBubble(int[] array, boolean ask) {
         int temp;
-        if (ask == true) {
+        if (ask) {
             for (int i = 1; i < array.length; i++) {
                 for (int j = i; j > 0; j--) {
                     if (array[j] > array[j - 1]) {

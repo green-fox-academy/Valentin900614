@@ -6,7 +6,7 @@ public class PrintAll {
 
         int[] numbers = new int[4];
         for (int i = 0; i <numbers.length ; i++) {
-            numbers[i] = i+4;
+            numbers[i] = i + 4;
         }
 
         for (int all : numbers) {
