@@ -12,8 +12,8 @@ public class DivideByZero {
         }
     }
 
-    public static void calculate(int a) {
-        System.out.println(10/a);
+    private static void calculate(int a) {
+        System.out.println(10 / a);
     }
 
 }

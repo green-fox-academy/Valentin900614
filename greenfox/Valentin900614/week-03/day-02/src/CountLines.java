@@ -14,19 +14,20 @@ public class CountLines {
 
     }
 
-    public static int countLines(String filename) {
+    private static int countLines(String filename) {
         int lines = 0;
+        List<String> list;
         try {
             Path path = Paths.get(filename);
-            List<String> list = Files.readAllLines(path);
-
-            for (int i = 0; i < list.size(); i++) {
-                lines++;
-            }
+            list = Files.readAllLines(path);
         } catch (Exception ex) {
             return lines;
         }
+
+        for (int i = 0; i < list.size(); i++) {
+            lines++;
+        }
+
         return lines;
     }
-
 }

@@ -19,11 +19,10 @@ public class WriteMultipleLines {
 
     }
 
-    public static void write (String path, String word, int num) {
+    private static void write (String path, String word, int num) {
+        List<String> list = new ArrayList<>();
         try {
             Path path1 = Paths.get(path);
-            List<String> list = new ArrayList<>();
-
             for (int i = 0; i < num; i++) {
                 list.add(word);
             }

@@ -9,22 +9,24 @@ public class ReversedLines {
         // Create a method that decrypts reversed-lines.txt
 
         Path path = Paths.get("reversed-lines");
+        List<String> list = new ArrayList<>();
+        List<String> reversedList = new ArrayList<>();
 
         try {
-            List<String> list = Files.readAllLines(path);
-            List<String> reversedList = new ArrayList<>();
+            list = Files.readAllLines(path);
 
-            for (int i = 0; i < list.size(); i++) {
-                StringBuffer stringBuffer = new StringBuffer(list.get(i));
-                stringBuffer.reverse();
-                reversedList.add(stringBuffer.toString());
-            }
-
-            for (int i = 0; i < reversedList.size(); i++) {
-                System.out.println(reversedList.get(i));
-            }
         } catch (Exception e) {
             System.err.println(e);
+        }
+
+        for (String string : list) {
+            StringBuffer stringBuffer = new StringBuffer(string);
+            stringBuffer.reverse();
+            reversedList.add(stringBuffer.toString());
+        }
+
+        for (String string : reversedList) {
+            System.out.println(string);
         }
     }
 }

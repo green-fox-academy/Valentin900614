@@ -11,18 +11,17 @@ public class WriteSingleLine {
         // The file should be named "my-file.txt"
         // In case the program is unable to write the file,
         // It should print the following error message: "Unable to write file: my-file.txt"
+        List<String> list = new ArrayList<>();
 
-        write();
+        write(list);
 
     }
 
-    public static void write() {
+    private static void write(List list) {
         try {
-        List<String> list = new ArrayList<>();
-        list.add("Károly Valentin");
-
-        Path path = Paths.get("my-file.txt");
-        Files.write(path, list);
+            list.add("Károly Valentin");
+            Path path = Paths.get("my-file.txt");
+            Files.write(path, list);
         } catch (Exception ex) {
             System.err.println("Unable to write file: my-file.txt");
         }

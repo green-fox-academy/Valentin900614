@@ -21,7 +21,7 @@ public class TicTacToe {
         // Should print "Draw"
     }
 
-    public static String ticTacResult (String s) {
+    private static String ticTacResult (String s) {
         Path p = Paths.get(s);
         String out = "";
         try {

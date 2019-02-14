@@ -10,22 +10,22 @@ public class ReversedOrder {
         // Create a method that decrypts reversed-order.txt
 
         Path path = Paths.get("reversed-order");
+        List<String> list = new ArrayList<>();
+        List<String> reversedList = new ArrayList<>();
 
         try {
-            List<String> list = Files.readAllLines(path);
-            List<String> reversedList = new ArrayList<>();
+            list = Files.readAllLines(path);
 
-            for (int i = list.size() - 1; i > 0; i--) {
-                StringBuffer stringBuffer = new StringBuffer(list.get(i));
-                reversedList.add(stringBuffer.toString());
-            }
-
-            for (int i = 0; i < reversedList.size(); i++) {
-                System.out.println(reversedList.get(i));
-            }
         } catch (Exception e) {
             System.err.println(e);
         }
+        for (int i = list.size() - 1; i > 0; i--) {
+            StringBuffer stringBuffer = new StringBuffer(list.get(i));
+            reversedList.add(stringBuffer.toString());
+        }
 
+        for (String string : reversedList) {
+            System.out.println(string);
+        }
     }
 }

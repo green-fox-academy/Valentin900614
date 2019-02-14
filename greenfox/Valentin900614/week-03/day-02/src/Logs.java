@@ -11,31 +11,35 @@ public class Logs {
         // Write a function that returns an array with the unique IP adresses.
         // Write a function that returns the GET / POST request ratio.
 
+        List<String> log = new ArrayList<>();
+
         try {
             Path path = Paths.get("log.txt");
-            List<String> log = Files.readAllLines(path);
+            log = Files.readAllLines(path);
 
-            String[] ip = uniqueIP(log);
-            System.out.println("Unique IP addresses (" + ip.length + ") are: ");
-            for (int i = 0; i < ip.length; i++) {
-                System.out.println(ip[i]);
-            }
-
-            System.out.println();
-
-            System.out.println("GET/POST");
-            for (int i = 0; i < 2; i++) {
-                System.out.print(getPost(log)[i] + " ");
-            }
         } catch (Exception ex) {
             System.err.println("error");
         }
+
+        String[] ip = uniqueIP(log);
+        System.out.println("Unique IP addresses (" + ip.length + ") are: ");
+
+        for (String i : ip) {
+            System.out.println(i);
+        }
+
+        System.out.println();
+
+        System.out.println("GET/POST");
+        for (int i = 0; i < 2; i++) {
+            System.out.print(getPost(log)[i] + " ");
+        }
     }
 
-    public static String[] uniqueIP (List<String> l) {
+    private static String[] uniqueIP (List<String> l) {
         List<String> IPs = new ArrayList<>();
-        for (int i = 0; i < l.size(); i++) {
-            String sub = l.get(i).substring(27, 38);        //ha elcsúszik a forrás akár egy karakternyit is már rossz lesz (.split method???)
+        for (String i : l) {
+            String sub = i.substring(27, 38);        //ha elcsúszik a forrás akár egy karakternyit is már rossz lesz (.split method???)
             if (!IPs.contains(sub))
                 IPs.add(sub);
         }
@@ -45,17 +49,18 @@ public class Logs {
         return ip;
     }
 
-    public static int[] getPost (List<String> l) {
+    private static int[] getPost (List<String> l) {
         int get = 0;
         int post = 0;
 
-        for (int i = 0; i < l.size(); i++) {
-            if (l.get(i).contains("GET")) {
+        for (String i : l) {
+            if (i.contains("GET")) {
                 get++;
             } else {
                 post++;
             }
         }
+
         int[] methods = {get, post};
         return methods;
     }
