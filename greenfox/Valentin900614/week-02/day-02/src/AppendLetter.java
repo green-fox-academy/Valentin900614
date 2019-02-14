@@ -8,7 +8,7 @@ public class AppendLetter{
 
         System.out.println(appendA(far));
     }
-    public static ArrayList appendA(ArrayList animals){
+    private static ArrayList appendA(ArrayList animals){
         for (int i = 0; i < animals.size(); i++) {
             animals.set(i, animals.get(i) + "a");
           }

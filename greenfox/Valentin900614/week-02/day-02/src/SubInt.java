@@ -16,19 +16,20 @@ public class SubInt {
         //  should print: '[]'
     }
 
-    public static List subInt (int number, int[] array) {
+    private static List subInt (int number, int[] array) {
         List<Integer> list = new ArrayList<>();
         List<Integer> returnList = new ArrayList<>();
         String num = Integer.toString(number);
-        for (int i = 0; i < array.length; i++) {
-            list.add(array[i]);
+        for (int i : array) {
+            list.add(i);
         }
 
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).toString().contains(num)) {
-                returnList.add(list.get(i));
+        for (int i : list) {
+            if (Integer.toString(i).contains(num)) {
+                returnList.add(i);
             }
         }
+
         return returnList;
     }
 

@@ -5,8 +5,8 @@ public class GuessMyNumber {
         guessing();
     }
 
-    public static void guessing () {
-        int randomNumber = 1 + (int) Math.random() * 99; //nem hajlandó mást generálni csak 1-est
+    private static void guessing () {
+        int randomNumber = 1 + (int) (Math.random() * 99); //nem hajlandó mást generálni csak 1-est
         Scanner scanner = new Scanner(System.in);
         int guessedNumber;
         int lives = 5;

@@ -14,7 +14,7 @@ public class QuoteSwap{
         // Expected output: "What I cannot create I do not understand."
 
     }
-    public static ArrayList quoteSwap(ArrayList array) {
+    private static ArrayList quoteSwap(ArrayList array) {
      //   System.out.println(array.indexOf("cannot"));
         Collections.swap(array, 5, 2); //nem tanultuk még aznap de google kisegített
 

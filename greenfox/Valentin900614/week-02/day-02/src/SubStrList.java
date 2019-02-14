@@ -16,9 +16,10 @@ public class SubStrList {
         //  should print: `-1`
     }
 
-    public static int subStrList (String string, String[] stringArray) {
+    private static int subStrList (String string, String[] stringArray) {
         List<String> list = new ArrayList<>();
         int index = -1;
+
         for (int i = 0; i < stringArray.length; i++) {
             list.add(stringArray[i]);
         }

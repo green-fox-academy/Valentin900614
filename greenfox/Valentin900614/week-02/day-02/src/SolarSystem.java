@@ -2,7 +2,7 @@ import java.util.*;
 
 public class SolarSystem{
     public static void main(String... args){
-        ArrayList<String> planetList = new ArrayList<>(Arrays.asList("Mercury","Venus","Earth","Mars","Jupiter","Uranus"
+        List<String> planetList = new ArrayList<>(Arrays.asList("Mercury","Venus","Earth","Mars","Jupiter","Uranus"
                 ,"Neptune"));
 
         // Saturn is missing from the planetList
@@ -12,7 +12,7 @@ public class SolarSystem{
         System.out.println(putSaturn(planetList));
         // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"
     }
-    public static ArrayList putSaturn(ArrayList listName) {
+    private static List putSaturn(List listName) {
         listName.add(5, "Saturn");
         return listName;
     }

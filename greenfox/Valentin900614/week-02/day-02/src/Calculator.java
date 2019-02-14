@@ -30,7 +30,7 @@ public class Calculator {
         System.out.println(calculate(operand, a, b));
     }
 
-    public static int calculate (String op, int x, int y) {
+    private static int calculate (String op, int x, int y) {
 
         int sum = 0;
         switch (op) {

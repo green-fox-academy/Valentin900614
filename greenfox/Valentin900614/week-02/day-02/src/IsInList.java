@@ -8,9 +8,9 @@ public class IsInList{
         // Check if list contains all of the following elements: 4,8,12,16
         // Create a method that accepts list as an input
         // it should return "true" if it contains all, otherwise "false"
-
     }
-    public static boolean checkNums(ArrayList list){
+
+    private static boolean checkNums(ArrayList list){
         if (list.contains(4) && list.contains(8) && list.contains(12) && list.contains(16)) {
             return true;
         }

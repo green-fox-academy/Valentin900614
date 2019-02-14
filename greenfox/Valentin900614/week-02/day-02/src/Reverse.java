@@ -8,7 +8,7 @@ public class Reverse {
 
         System.out.println(reverse(reversed));
     }
-    public static String reverse(String smthng) {
+    private static String reverse(String smthng) {
         char help;
         String uj = "";
         for (int i = 0; i < smthng.length(); i++) {

@@ -9,7 +9,7 @@ public class ElementFinder{
         // Do this again with a different solution using different list methods!
 
     }
-    public static String containsSeven(ArrayList list) {
+    private static String containsSeven(ArrayList list) {
         if(list.contains(7)) {
            return "Hoorray";
         } else

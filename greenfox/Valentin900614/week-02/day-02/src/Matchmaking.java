@@ -11,14 +11,13 @@ public class Matchmaking{
 
         System.out.println(makingMatches(girls, boys));
     }
-    public static ArrayList makingMatches(ArrayList firstList, ArrayList secondList) {
+    private static ArrayList makingMatches(ArrayList firstList, ArrayList secondList) {
         ArrayList<String> joinedList = new ArrayList<>();
         for (int i = 0; i < firstList.size(); i++) {
             for (int j = 0; j < secondList.size(); j++) {
                 if (i == j){
                     joinedList.add(firstList.get(i).toString());
                     joinedList.add(secondList.get(j).toString());
-
                 }
             }
         }
