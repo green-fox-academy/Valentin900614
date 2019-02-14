@@ -23,7 +23,7 @@ public class Farm {
     public void slaughter (List<Animal> list) {
         int index = 0;
         for (int i = 1; i < list.size(); i++) {
-            if (list.get(index).hunger < list.get(i).hunger)
+            if (list.get(index).hunger > list.get(i).hunger)
                 index = i;
         }
         list.remove(list.get(index));
