@@ -1,12 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class exercise1 {
+public class exercise3 {
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14);
+        List<Integer> numbers = Arrays.asList(3, 9, 2, 8, 6, 5);
 
         numbers.stream()
-                .filter(s -> s % 2 == 0)
+                .filter(s -> s * s > 20)
                 .forEach(System.out::println);
     }
 }
