@@ -1,0 +1,46 @@
+body {
+    background: #dadbff;
+    color: gray;
+    font-family: Arial;
+    padding-left: 25%;
+    padding-top: 100px;
+}
+
+form {
+    padding-left: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: white;
+    width: 50%;
+}
+
+input[type = password], [type = text] {
+    width: 300px;
+    height: 30px;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+input[type = submit] {
+    color: white;
+    background: #0f0d2f;
+    border: 0;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+label {
+    font-size: 8px;
+}
+
+p {
+    margin-top: -5px;
+    font-size: 8px;
+    text-align: right;
+    margin-right: 265px;
+}
