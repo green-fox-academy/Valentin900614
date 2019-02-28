@@ -1,0 +1,17 @@
+body {
+    padding: 50px;
+}
+
+hr {
+    background-color: aqua;
+    margin-top: -20px;
+    height: 3px;
+}
+
+h1 {
+    color: aqua;
+}
+
+thead tr {
+    background-color: aqua;
+}
