@@ -15,7 +15,7 @@ public class HelloWebController {
     public String greeting(Model model) {
         //atomicLong.incrementAndGet();
 
-        Greeting greeting = new Greeting(atomicLong.incrementAndGet(), "Wordl");
+        Greeting greeting = new Greeting(atomicLong.incrementAndGet(), "World");
 
         model.addAttribute("greeting", greeting);
 

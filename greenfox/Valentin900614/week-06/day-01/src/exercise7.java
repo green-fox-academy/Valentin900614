@@ -6,6 +6,8 @@ public class exercise7 {
         List<String> cities = Arrays.asList("ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS");
         String givenLetter = "A";
 
-        cities.stream().filter(s -> s.startsWith(givenLetter)).forEach(System.out::println);
+        cities.stream()
+                .filter(s -> s.startsWith(givenLetter))
+                .forEach(System.out::println);
     }
 }
