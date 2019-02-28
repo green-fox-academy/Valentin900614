@@ -4,15 +4,15 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class Greeting {
 
-    private AtomicLong id;
+    private long id;
     private String content;
 
-    public Greeting(AtomicLong id, String content) {
+    public Greeting(long id, String content) {
         this.id = id;
         this.content = content;
     }
 
-    public AtomicLong getId() {
+    public long getId() {
         return id;
     }
 

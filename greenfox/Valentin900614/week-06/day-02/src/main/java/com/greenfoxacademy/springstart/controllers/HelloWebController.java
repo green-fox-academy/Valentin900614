@@ -11,11 +11,16 @@ import java.util.concurrent.atomic.AtomicLong;
 public class HelloWebController {
     private AtomicLong atomicLong = new AtomicLong();
 
-    @RequestMapping("/web/greeting")
+    @RequestMapping(value = "/web/greeting")
     public String greeting(Model model) {
-        atomicLong.incrementAndGet();
-        model.addAttribute("name", " World");
-        model.addAttribute("count", atomicLong);
+        //atomicLong.incrementAndGet();
+
+        Greeting greeting = new Greeting(atomicLong.incrementAndGet(), "Wordl");
+
+        model.addAttribute("greeting", greeting);
+
+        //model.addAttribute("name", " World");
+        //model.addAttribute("count", atomicLong);
         return "greeting";
     }
 }
