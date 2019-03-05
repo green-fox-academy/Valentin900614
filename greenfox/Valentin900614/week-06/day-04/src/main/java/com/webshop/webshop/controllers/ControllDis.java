@@ -3,10 +3,10 @@ package com.webshop.webshop.controllers;
 import com.webshop.webshop.models.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 public class ControllDis {
@@ -26,9 +26,71 @@ public class ControllDis {
                 list.add(shopItem4);
         }
 
-        @RequestMapping
-        public String index(Model model) {
+        @RequestMapping(value = "/")
+        public String showAllShopItems(Model model) {
                 model.addAttribute("list", list);
+                return "index";
+        }
+
+        @RequestMapping(value = "/onlyavailable")
+        public String showOnlyAvailableItems(Model model) {
+                List<ShopItem> newList = list.stream()
+                        .filter(s -> s.getQuantityOfStock() > 0)
+                        .collect(Collectors.toList());
+
+                model.addAttribute("list", newList);
+                return "index";
+        }
+
+        @RequestMapping(value = "/averagestock")
+        public String countAverageOfStock(Model model) {
+                double sumStock = list.stream()
+                        .mapToDouble(a -> a.getQuantityOfStock())
+                        .average().getAsDouble();
+
+                model.addAttribute("average", sumStock);
+                return "averagestock";
+        }
+
+        @RequestMapping(value = "/cheapestfirst")
+        public String sortItemsAsCheapestFirst(Model model) {
+                List<ShopItem> cheapestList = list.stream()
+                        .sorted(Comparator.comparing(ShopItem::getPrice))
+                        .collect(Collectors.toList());
+                model.addAttribute("list", cheapestList);
+                return "index";
+        }
+
+        @RequestMapping(value = "/mostexpensive")
+        public String showMostExpensiveItem(Model model) {
+                        ShopItem mostExpensiveItem = Collections.max(list, Comparator.comparing(s -> s.getPrice()));
+                        model.addAttribute("list", mostExpensiveItem);
+                        return "index";
+        }
+
+        @RequestMapping(value = "/containsnike")
+        public String showItemsWhichContainsNike(Model model) {
+                List<ShopItem> nikeList = list.stream()
+                        .filter(s -> s.getName().toLowerCase().contains("nike") || s.getDescription().toLowerCase().contains("nike"))
+                        .collect(Collectors.toList());
+
+                model.addAttribute("list", nikeList);
+                return "index";
+        }
+
+        @RequestMapping(value = "/search", method = RequestMethod.POST)
+        public String showSearchedItems(Model model, @RequestParam(name = "search", required = false) String search) {
+                List<ShopItem> searchedList = new ArrayList<>();
+                if (search != null) {
+                        searchedList = list.stream()
+                                .filter(s -> s.getName().toLowerCase().contains(search) || s.getDescription().toLowerCase().contains(search))
+                                .collect(Collectors.toList());
+
+                        model.addAttribute("list", searchedList);
+                } else
+                        searchedList.add(new ShopItem("No record", "Zero items have your keyword", 0, 0));
+                        model.addAttribute("list", searchedList);
+
                 return "index";
         }
 
