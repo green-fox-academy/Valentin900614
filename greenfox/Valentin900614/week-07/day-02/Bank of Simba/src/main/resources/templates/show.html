@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Index of animal bank accounts</title>
+</head>
+<body>
+<div>
+    <div th:each="item : ${list}" >
+        <h1 th:text="${item.name} + ' - money: ' +${item.balance} + '.00 Zebra, type:' + ' (' + ${item.animalType} + ') '"></h1>
+    </div>
+</div>
+</body>
+</html>
