@@ -79,7 +79,7 @@ public class ControllDis {
         }
 
         @RequestMapping(value = "/search", method = RequestMethod.POST)
-        public String showSearchedItems(Model model, @RequestParam(name = "search", required = false) String search) {
+        public String showSearchedItems(Model model, @RequestParam(name = "searchbar", required = false) String search) {
                 List<ShopItem> searchedList = new ArrayList<>();
                 if (search != null) {
                         searchedList = list.stream()
