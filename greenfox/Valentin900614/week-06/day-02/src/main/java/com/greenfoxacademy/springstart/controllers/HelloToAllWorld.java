@@ -35,7 +35,7 @@ public class HelloToAllWorld {
         Color col = new Color(r, g, b);
         model.addAttribute("color", col);
 
-        return "index";
+        return "index"; //dunno egyáltalán ez itt jól adja-e át a dolgokat
     }
 
 }
