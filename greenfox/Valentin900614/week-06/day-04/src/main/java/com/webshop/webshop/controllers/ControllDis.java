@@ -63,9 +63,9 @@ public class ControllDis {
 
         @RequestMapping(value = "/mostexpensive")
         public String showMostExpensiveItem(Model model) {
-                        ShopItem mostExpensiveItem = Collections.max(list, Comparator.comparing(s -> s.getPrice()));
-                        model.addAttribute("list", mostExpensiveItem);
-                        return "index";
+                ShopItem mostExpensiveItem = Collections.max(list, Comparator.comparing(s -> s.getPrice()));
+                model.addAttribute("list", mostExpensiveItem);
+                return "index";
         }
 
         @RequestMapping(value = "/containsnike")
