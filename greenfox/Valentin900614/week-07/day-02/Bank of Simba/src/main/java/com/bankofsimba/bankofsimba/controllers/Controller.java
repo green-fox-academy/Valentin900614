@@ -10,7 +10,7 @@ import java.util.List;
 @org.springframework.stereotype.Controller
 public class Controller {
 
-    List<BankAccount> animalAccounts = new ArrayList<>();
+    private List<BankAccount> animalAccounts = new ArrayList<>();
 
     public Controller() {
 
