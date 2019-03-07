@@ -3,6 +3,7 @@ package com.dependencyexamples.dependency;
 import com.dependencyexamples.dependency.classes.MyColor;
 import com.dependencyexamples.dependency.classes.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +15,7 @@ public class DependencyApplication implements CommandLineRunner {
     private MyColor myColor;
 
     @Autowired
-    DependencyApplication(Printer printer, MyColor myColor) {
+    DependencyApplication(Printer printer, MyColor myColor) { //ide kell a qualifier, ha nincs primary!!!
         this.printer = printer;
         this.myColor = myColor;
     }
