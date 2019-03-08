@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programmer Fox Club</title>
+    </head>
+    <body>
+    <ul>
+        <li>
+            <a href="" >Information</a>
+        </li>
+    </ul>
+    <img src="greenfox.png" name="greenfox" alt="fox">
+
+    <div>
+        <p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink} + '. He knows ' + ${fox.listOfTricks.count()} + ' tricks.'"></p>
+        <h1>KNOWS TRICKS</h1>
+        <ul>
+            <li>write HTML</li>
+            <li>code in Java</li>
+        </ul>
+    </div>
+    </body>
+</html>
