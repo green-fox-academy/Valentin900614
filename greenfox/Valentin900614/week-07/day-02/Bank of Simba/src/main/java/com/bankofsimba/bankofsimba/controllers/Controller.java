@@ -22,7 +22,7 @@ public class Controller {
 
     }
 
-    @RequestMapping(value = "/show")
+    @RequestMapping("/show")
     public String showAllAnimalAccounts (Model model) {
         model.addAttribute("list", animalAccounts);
         return "show";
