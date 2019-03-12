@@ -8,6 +8,11 @@
 
 <div>
     <h1><a href="/useful/colored" >Gimme a random background color</a></h1>
+    <h1><a href="/useful/email?email=is@this.valid">Check if is@this.valid is a valid e-mail address</a></h1>
+</div>
+<div>
+    <div th:if="${answer} == true" th:text="'The given string is an e-mail address!'" style="color:green;"></div>
+    <div th:if="${answer} == false" th:text="'The given string is NOT an e-mail address!'" style="color:red;"></div>
 </div>
 
 </body>
