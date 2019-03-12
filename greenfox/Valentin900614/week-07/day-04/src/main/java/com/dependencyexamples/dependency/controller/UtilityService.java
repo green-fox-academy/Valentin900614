@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,8 +12,8 @@ import java.util.Random;
 @Controller
 @Service
 public class UtilityService {
-    ArrayList<String> colors;
-    Random random;
+    private ArrayList<String> colors;
+    private Random random;
 
     public UtilityService() {
         colors = new ArrayList<>();
@@ -24,16 +25,16 @@ public class UtilityService {
         random = new Random();
     }
 
-    public String randomColor() {
+    private String randomColor() {
         return colors.get(random.nextInt(colors.size()));
     }
 
-    @RequestMapping(value = "/useful")
+    @RequestMapping(value = "/useful", method = RequestMethod.GET)
     public String usefulIndex(){
         return "useful";
     }
 
-    @RequestMapping(value = "/useful/colored")
+    @RequestMapping(value = "/useful/colored", method = RequestMethod.GET)
     public String colorizeTheBackground (Model model) {
         model.addAttribute("color", randomColor());
         return "useful";

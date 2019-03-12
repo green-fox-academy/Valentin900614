@@ -1,5 +1,6 @@
-package com.dependencyexamples.dependency.classes;
+package com.dependencyexamples.dependency.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -7,9 +8,16 @@ import org.springframework.stereotype.Service;
 @Qualifier("green") //ha nincs primary, és ezt átadom a main-ben, ezt fogja kiírni
 public class GreenColor implements MyColor {
 
+    private Printer printer;
+
+    @Autowired
+    public GreenColor(Printer printer) {
+        this.printer = printer;
+    }
+
     @Override
     public void printColor() {
-        System.out.println("It is green in color...");
+        printer.log("It is green in color...");
     }
 
 }

@@ -1,9 +1,8 @@
 package com.dependencyexamples.dependency;
 
-import com.dependencyexamples.dependency.classes.MyColor;
-import com.dependencyexamples.dependency.classes.Printer;
+import com.dependencyexamples.dependency.models.MyColor;
+import com.dependencyexamples.dependency.models.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

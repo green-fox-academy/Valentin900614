@@ -1,4 +1,4 @@
-package com.dependencyexamples.dependency.classes;
+package com.dependencyexamples.dependency.models;
 
 import org.springframework.stereotype.Service;
 
