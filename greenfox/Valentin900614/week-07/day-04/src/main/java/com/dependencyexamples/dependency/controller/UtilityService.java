@@ -12,6 +12,7 @@ import java.util.Random;
 @Controller
 @Service
 public class UtilityService {
+    
     private ArrayList<String> colors;
     private Random random;
 
