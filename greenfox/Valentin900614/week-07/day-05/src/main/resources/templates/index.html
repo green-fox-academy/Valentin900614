@@ -5,20 +5,16 @@
         <title>Programmer Fox Club</title>
     </head>
     <body>
-    <ul>
-        <li>
-            <a href="" >Information</a>
-        </li>
-    </ul>
+
     <img src="greenfox.png" name="greenfox" alt="fox">
 
-    <div>
-        <p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink} + '. He knows ' + ${fox.listOfTricks.count()} + ' tricks.'"></p>
-        <h1>KNOWS TRICKS</h1>
-        <ul>
-            <li>write HTML</li>
-            <li>code in Java</li>
-        </ul>
-    </div>
+    <p th:text="'You have successfully visited your pet: ' + (${fox} != null ? ${fox.getName()} : 'Mr. Fox')"></p>
+    <p> </p>
+    <ul>
+        <li><a th:href="'/information?name=' + ${name}">Information</a></li>
+        <li><a th:href="'/nutritionStore?name=' + ${name}">Nutrition Store</a></li>
+        <li><a th:href="'/trickCenter?name=' + ${name}">Trick Center</a></li>
+        <li><a th:href="'/actionHistory?name=' + ${name}">Action History</a></li>
+    </ul>
     </body>
 </html>
