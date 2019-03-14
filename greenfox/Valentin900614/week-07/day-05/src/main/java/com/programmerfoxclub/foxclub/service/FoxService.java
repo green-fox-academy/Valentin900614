@@ -1,4 +1,4 @@
-package com.programmerfoxclub.foxclub.model;
+package com.programmerfoxclub.foxclub.service;
 
 import org.springframework.stereotype.Service;
 

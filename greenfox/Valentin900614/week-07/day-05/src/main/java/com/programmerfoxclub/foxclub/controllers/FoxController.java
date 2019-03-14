@@ -1,7 +1,7 @@
 package com.programmerfoxclub.foxclub.controllers;
 
 import com.programmerfoxclub.foxclub.model.FoxList;
-import com.programmerfoxclub.foxclub.model.FoxService;
+import com.programmerfoxclub.foxclub.service.FoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
