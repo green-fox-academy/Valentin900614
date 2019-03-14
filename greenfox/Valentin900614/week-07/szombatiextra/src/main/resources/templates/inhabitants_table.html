@@ -15,7 +15,7 @@
     </tr>
     <tr th:each="inhabitant : ${inhabitants}">
         <td th:text="${inhabitant.id}"></td>
-        <td><a th:href="@{'/inhabitants/' + ${inhabitant.id}}">
+        <td><a th:href="@{'/inhabitant/' + ${inhabitant.id}}">
             <span th:text="${inhabitant.name}"></span>
         </a></td>
         <td th:text="${inhabitant.age}"></td>

@@ -9,8 +9,13 @@ public class Inhabitant {
     private Integer age;
     private Gender gender;
 
+    public Inhabitant() {
+        id = nextID;
+
+    }
+
     public Inhabitant(String name, Integer age, Gender gender) {
-        this.id = nextID++;
+        id = nextID++;
         this.name = name;
         this.age = age;
         this.gender = gender;

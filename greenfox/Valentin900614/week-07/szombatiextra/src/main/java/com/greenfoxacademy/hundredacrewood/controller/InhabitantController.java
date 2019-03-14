@@ -3,6 +3,7 @@ package com.greenfoxacademy.hundredacrewood.controller;
 import com.greenfoxacademy.hundredacrewood.model.Gender;
 import com.greenfoxacademy.hundredacrewood.model.Inhabitant;
 import com.greenfoxacademy.hundredacrewood.model.InhabitantList;
+import com.greenfoxacademy.hundredacrewood.model.OrderList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class InhabitantController {
 
     private InhabitantList inhabitantList;
+    private OrderList orderList;
 
     @Autowired
-    public InhabitantController(InhabitantList inhabitantList) {
+    public InhabitantController(InhabitantList inhabitantList, OrderList orderList) {
         this.inhabitantList = inhabitantList;
+        this.orderList = orderList;
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
@@ -29,6 +32,7 @@ public class InhabitantController {
     @RequestMapping(path = "/inhabitants", method = RequestMethod.GET)
     public String showInhabitants(Model model) {
         model.addAttribute("inhabitants", inhabitantList.getInhabitants());
+        model.addAttribute("orders", orderList.getOrders());
         return "inhabitants_table";
     }
 
@@ -47,8 +51,8 @@ public class InhabitantController {
     }
 
     @RequestMapping(path = "/inhabitants/add", method = RequestMethod.GET)
-    public String addInhabitantForm(Model model, @ModelAttribute(name = "inhabitant") Inhabitant inhabitant) {
-        model.addAttribute("inhabitant", inhabitant);
+    public String addInhabitantForm(Model model) {
+        model.addAttribute("inhabitant", new Inhabitant());
         model.addAttribute("genders", Gender.values());
         return "create";
     }
@@ -57,6 +61,12 @@ public class InhabitantController {
     public String addInhabitant(@ModelAttribute(name = "inhabitant") Inhabitant inhabitant) {
         inhabitantList.addNewInhabitant(inhabitant);
         return "redirect:/inhabitants";
+    }
+
+    @RequestMapping(path = "/inhabitant/search", method = RequestMethod.POST)
+    public String searchByName(@ModelAttribute(name = "searchbar") String name) {
+        int id = inhabitantList.returnIdByName(name);
+        return "redirect:/inhabitant/" + id;
     }
 
 }

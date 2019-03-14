@@ -35,4 +35,12 @@ public class InhabitantList {
     public void addNewInhabitant (Inhabitant inhabitant) {
         inhabitants.add(inhabitant);
     }
+
+    public int returnIdByName (String string) {
+        for (Inhabitant inhabitant : inhabitants) {
+            if (inhabitant.getName().toLowerCase().contains(string.toLowerCase()))
+                return inhabitant.getId();
+        }
+        return -1;
+    }
 }
