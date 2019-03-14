@@ -56,7 +56,7 @@ public class FoxController {
     @RequestMapping(value = "/trickCenter", method = RequestMethod.GET)
     public String showTricks(Model model, @RequestParam String name) {
         model.addAttribute("name", name);
-        model.addAttribute("tricklist", foxList.findFox(name).findUnkonwTricks(foxService.getTrickList()));
+        model.addAttribute("tricklist", foxList.findFox(name).findUnknownTricks(foxService.getTrickList()));
         return "tricks";
     }
 

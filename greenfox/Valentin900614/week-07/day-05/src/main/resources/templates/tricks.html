@@ -13,8 +13,8 @@
 </ul>
 <div th:if="${tricklist.size() != 0}">
     <form action="#" th:action="@{'/trickCenter?name=' + ${name}}"  method="post">
-        <label>Tricks</label>
-        <select name="trick">
+        <label for="trick">Tricks</label>
+        <select name="trick" id="trick">
             <option th:each="trick : ${tricklist}" th:text="${trick}" th:value="${trick}"></option>
         </select>
         <input type="submit" value="Learn">

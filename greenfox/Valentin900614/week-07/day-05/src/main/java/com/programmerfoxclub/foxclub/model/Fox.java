@@ -65,7 +65,7 @@ public class Fox {
         this.listOfTricks.add(trick);
     }
 
-    public List<String> findUnkonwTricks(List<String> tricksToSearch) {
+    public List<String> findUnknownTricks(List<String> tricksToSearch) {
         return tricksToSearch.stream()
                 .filter(t -> !listOfTricks.contains(t))
                 .collect(Collectors.toList());

@@ -8,7 +8,7 @@
 
     <img src="greenfox.png" name="greenfox" alt="fox">
 
-    <p th:text="'You have successfully visited your pet: ' + (${fox} != null ? ${fox.getName()} : 'Mr. Fox')"></p>
+    <p th:text="'You have successfully visited your pet: ' + (${fox} != null ? ${fox.name} : 'Mr. Fox')"></p>
     <p> </p>
     <ul>
         <li><a th:href="'/information?name=' + ${name}">Information</a></li>
