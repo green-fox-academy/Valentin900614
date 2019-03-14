@@ -12,6 +12,19 @@
     <h2 th:text="*{age}"></h2>
     <h3 th:text="*{gender}"></h3>
 </div>
+<p>The list of this inhabitant's orders:</p>
+<table th:object="${orders}">
+    <thead>
+        <tr>
+            <td>Name of order</td>
+            <td>Cost of order</td>
+        </tr>
+    </thead>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.name}"></td>
+        <td th:text="${order.cost}"></td>
+    </tr>
+</table>
 
 </body>
 </html>

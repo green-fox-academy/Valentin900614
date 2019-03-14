@@ -9,6 +9,7 @@ import java.util.List;
 public class OrderList {
 
     private List<Order> orders;
+    private List<Order> filteredList;
 
     public OrderList() {
         this.orders = new ArrayList<>();
@@ -26,12 +27,14 @@ public class OrderList {
         return orders;
     }
 
-    public Order filterByInhabitantId (int id) {
+    public List<Order> filterByInhabitantId (int id) {
+        filteredList = new ArrayList<>();
         for (Order order : orders) {
             if (order.getInhabitantId() == id)
-                return order;
+                filteredList.add(order);
         }
-        return null;
+
+        return filteredList;
     }
 
     public int countOrdersById (int id) {

@@ -1,9 +1,6 @@
 package com.greenfoxacademy.hundredacrewood.controller;
 
-import com.greenfoxacademy.hundredacrewood.model.Gender;
-import com.greenfoxacademy.hundredacrewood.model.Inhabitant;
-import com.greenfoxacademy.hundredacrewood.model.InhabitantList;
-import com.greenfoxacademy.hundredacrewood.model.OrderList;
+import com.greenfoxacademy.hundredacrewood.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 @Controller
 public class InhabitantController {
@@ -38,6 +37,9 @@ public class InhabitantController {
 
     @RequestMapping(path = "/inhabitant/{id}", method = RequestMethod.GET)
     public String getInhabitantById(@PathVariable int id, Model model) {
+
+        List<Order> filteredListId = orderList.filterByInhabitantId(id);
+        model.addAttribute("orders", filteredListId);
 
         Inhabitant inhabitant = inhabitantList.filterById(id);
 
