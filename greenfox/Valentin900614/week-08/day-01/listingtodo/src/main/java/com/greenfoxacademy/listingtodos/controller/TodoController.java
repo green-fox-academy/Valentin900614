@@ -1,6 +1,6 @@
 package com.greenfoxacademy.listingtodos.controller;
 
-import com.greenfoxacademy.listingtodos.service.ToDoService;
+import com.greenfoxacademy.listingtodos.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TodoController {
 
-    private ToDoService todoService;
+    private TodoRepository todoRepository;
 
     @Autowired
-    public TodoController(ToDoService todoService) {
-        this.todoService = todoService;
+    public TodoController(TodoRepository todoRepository) {
+        this.todoRepository = todoRepository;
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
@@ -26,7 +26,7 @@ public class TodoController {
 
     @RequestMapping(path = "/list", method = RequestMethod.GET)
     public String showToDoList(Model model) {
-        model.addAttribute("list", todoService.getAllTodos());
+        model.addAttribute("list", todoRepository.findAll());
         return "todolist";
     }
 

@@ -17,13 +17,14 @@ public class Todo {
     private boolean done;
 
     public Todo() {
-
+        urgent = false;
+        done = false;
     }
 
-    public Todo(String title, boolean urgent, boolean done) {
+    public Todo(String title) {
         this.title = title;
-        this.urgent = urgent;
-        this.done = done;
+        urgent = false;
+        done = false;
     }
 
     public long getId() {
