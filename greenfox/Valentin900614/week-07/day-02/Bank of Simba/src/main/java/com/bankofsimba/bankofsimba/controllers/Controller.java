@@ -22,13 +22,13 @@ public class Controller {
         animalAccounts.add(new BankAccount("Timon", 800, "meerkat", false, true));
         animalAccounts.add(new BankAccount("Pumba", 650, "warthog", false, true));
         animalAccounts.add(new BankAccount("Zazu", 4238, "hornbill", false, true));
+        animalAccounts.add(new BankAccount("Scar", 250, "lion", true, false));
 
     }
 
     @RequestMapping(path = "/show", method = RequestMethod.GET)
     public String showAllAnimalAccounts (Model model) {
         model.addAttribute("list", animalAccounts);
-        model.addAttribute("newAccount", new BankAccount());
         return "show";
     }
 
@@ -39,7 +39,13 @@ public class Controller {
         return "show";
     }
 
-    @RequestMapping(path = "/show/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/add", method = RequestMethod.GET)
+    public String showForm(Model model) {
+        model.addAttribute("newAccount", new BankAccount());
+        return "newaccountform";
+    }
+
+    @RequestMapping(path = "/add", method = RequestMethod.POST)
     public String addNewAccount(@ModelAttribute BankAccount newAccount) {
         animalAccounts.add(newAccount);
         return "redirect:/show";

@@ -9,7 +9,8 @@ public class BankAccount {
     private boolean goodGuy;
 
     public BankAccount() {
-
+        king = false;
+        goodGuy = true;
     }
 
     public BankAccount(String name, int balance, String animalType, boolean king, boolean goodGuy) {

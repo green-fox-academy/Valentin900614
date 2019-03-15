@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new account to the bank</title>
+</head>
+<body>
+<form action="#" th:action="@{/add}" th:object="${newAccount}" method="post">
+    <p>Add a new account to the bank!</p>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" th:field="*{name}" required>
+
+    <label for="balance">Balance</label>
+    <input type="number" id="balance" name="balance" th:field="*{balance}" required>
+
+    <label for="type">Animal type</label>
+    <input type="text" id="type" name="type" th:field="*{animalType}" required>
+
+    <label th:text="'King:'"></label>
+    <input type="checkbox" name="king" th:field="*{king}">
+
+    <label th:text="'Good:'"></label>
+    <input type="radio" name="good" value="true" th:field="*{goodGuy}">
+    <label th:text="'Bad:'"></label>
+    <input type="radio" name="good" value="false" th:field="*{goodGuy}">
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
